@@ -1,0 +1,375 @@
+// ================================================================================================
+//  File Name: search.scss
+//  Description: Page content search pages page layouts SCSS.
+//  ----------------------------------------------------------------------------------------------
+//  Item Name: Vuexy React Admin Template
+//  Version: 1.0
+//  Author: PIXINVENT
+//  Author URL: http://www.themeforest.net/user/pixinvent
+// ================================================================================================
+
+// Core variables and mixins overrides
+@import "~bootstrap/scss/_functions.scss";
+@import "../core/variables/variables";
+@import "~bootstrap/scss/_variables.scss";
+
+// Overrides user variable
+@import "../core/variables/components-variables";
+
+.search-results {
+  //media-list
+  .media-list {
+    .media {
+      padding: 0.5rem 1rem;
+    }
+  }
+}
+
+//search-menu
+.search-menu {
+  .search-filter,
+  .dropdown-toggle {
+    padding: 0.55rem 1rem !important;
+    cursor: pointer;
+    background-color: $white;
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11),
+      0 5px 15px 0 rgba(0, 0, 0, 0.08);
+  }
+  //dropdown arrow icon display hide
+  .dropdown-toggle {
+    border-radius: 1.5rem !important;
+    &::after {
+      display: none;
+    }
+  }
+}
+
+//dropdown arrow icon
+.search-result-info {
+  .btn {
+    &.dropdown-toggle {
+      &::after {
+        left: 0;
+      }
+    }
+  }
+}
+
+// image and iframe height-width
+@media only screen and (min-width: 577px) {
+  .search-results {
+    .media-list {
+      .media {
+        .media-object {
+          width: 100px;
+        }
+        iframe {
+          width: 100px;
+          height: 65px;
+        }
+      }
+    }
+  }
+}
+
+// image and iframe height-width in sm screen
+@media only screen and (max-width: 576px) {
+  .search-results {
+    .media-list {
+      .media {
+        .media-left {
+          width: 100%;
+          img,
+          iframe {
+            width: 100%;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// custom css
+.filter-btn-group {
+  display: flex;
+  justify-content: space-between;
+
+  .filter-btn {
+    box-shadow: 4px 4px 8px rgba(202, 206, 220, 0.62), -4px -4px 8px #FFFFFF;
+    border-radius: 5px;
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    padding: 12px;
+    color: #162548;
+    width: 175px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .filter-btn-active {
+    background: linear-gradient(140.55deg, #17DEDE 8%, #69EBEC 89.66%);
+    box-shadow: 4px 4px 8px rgba(202, 206, 220, 0.62), -4px -4px 8px #FFFFFF;
+    border-radius: 5px;
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    padding: 12px;
+    color: #FFFFFF;
+    width: 175px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.custom-card {
+  border: 0.5px solid rgba(202, 206, 220, 0.15) !important;
+  box-shadow: 7px 7px 10px rgba(202, 206, 220, 0.31), -7px -7px 10px rgba(255, 255, 255, 0.5) !important;
+  border-radius: 5px;
+  height: 100%;
+  background-color: #F1F3F6;
+  position: relative;
+}
+
+.map-container {
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+
+  .map-line {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    background: #F1F3F6;
+    border: 0.5px solid rgba(202, 206, 220, 0.15);
+    box-sizing: border-box;
+    box-shadow: 10px 10px 15px rgba(202, 206, 220, 0.62), -10px -10px 15px rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 16px;
+    padding-right: 32px;
+  }
+
+  .map-line-item {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .line-item-circle1 {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #FF7575;
+    margin: 5px 15px 0px 5px;
+  }
+
+  .line-item-circle2 {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #E9A82C;
+    margin: 5px 15px 0px 5px;
+  }
+
+  .line-item-circle3 {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #14CB3D;
+    margin: 5px 15px 0px 5px;
+  }
+
+  .line-item-circle4 {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #69EBEC;
+    margin: 5px 15px 0px 5px;
+  }
+
+  .line-item-circle5 {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:#854BCF;
+    margin: 5px 15px 0px 5px;
+  }
+
+  .map-tools {
+    position: absolute;
+    right: 80px;
+    bottom: 80px;
+  }
+
+  .map-btn-group {
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+    display: flex;
+    justify-content: flex-end;
+
+    .map-btn {
+      width: 28px;
+      height: 28px;
+      background: #F1F3F6;
+      box-shadow: -7px -7px 10px #FFFFFF, 7px 7px 10px rgba(202, 206, 220, 0.62);
+      border-radius: 5px;
+      margin-left: 12px;
+
+      svg {
+        color: #000;
+      }
+    }
+  }
+}
+
+// this is from dashboard
+.custom-card {
+    border: 0.5px solid rgba(202, 206, 220, 0.15) !important;
+    box-shadow: 7px 7px 10px rgba(202, 206, 220, 0.31), -7px -7px 10px rgba(255, 255, 255, 0.5) !important;
+    border-radius: 5px;
+    height: 100%;
+    background-color: #F1F3F6;
+    padding: 16px;
+    position: relative;
+
+    .area-chart {
+        text-align: center;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .area-chart-below {
+        text-align: center;
+
+        img {
+            margin-top: 25px;
+            width: 80%;
+        }
+    }
+
+    .filter-button-group {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+
+        .filter-btn-active {
+            background: linear-gradient(140.55deg, #17DEDE 8%, #69EBEC 89.66%);
+            box-shadow: 4px 4px 8px rgba(202, 206, 220, 0.62), -4px -4px 8px #FFFFFF;
+            border-radius: 5px;
+            text-align: center;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 18px;
+            padding: 8px;
+            color: #FFFFFF;
+
+            .filter-addon {
+                margin-left: 12px;
+            }
+        }
+
+        .filter-btn {
+            box-shadow: 4px 4px 8px rgba(202, 206, 220, 0.62), -4px -4px 8px #FFFFFF;
+            border-radius: 5px;
+            text-align: center;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 18px;
+            padding: 8px;
+            color: #162548;
+
+            .filter-addon {
+                margin-left: 12px;
+            }
+        }
+    }
+
+    .price-index-description {
+        font-family: Nunito Sans;
+        font-style: normal;
+        font-weight: normal;
+        margin-top: 12px;
+
+        .desc-title {
+            font-size: 16px;
+            line-height: 20px;
+            align-items: center;
+            color: #162548;
+        }
+
+        .desc-content {
+            font-size: 14px;
+            line-height: 18px;
+            color: #68696A;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 6px;
+
+            .desc-content-right {
+                font-weight: 600;
+                color: #162548;
+            }
+
+            .red {
+                color: #DF4210;
+
+                span {
+                    margin-right: 4px;
+                    img {
+                        height: 8px;
+                    }
+                }
+            }
+
+            .green {
+                color: #14CB3D;
+                
+                span {
+                    margin-right: 4px;
+                    img {
+                        height: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.demand-chart {
+  width: 90%;
+}
+
+.group-chart {
+  width: 170px;
+  height: 210px;
+  margin-top: 15px;
+  margin-left: -16px;
+}
+
+.dropdown {
+  float: left;
+
+  &:last-child {
+      margin-top: 20px;
+  }
+}
+
+.addon-prev {
+  margin-right: 10px;
+}

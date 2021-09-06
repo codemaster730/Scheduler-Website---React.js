@@ -1,0 +1,131 @@
+
+.header-navbar .navbar-wrapper {
+    background: #F1F3F6 !important;
+
+    .nav-brand {
+        font-family: Nunito Sans;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 29px;
+        display: flex;
+        align-items: center;
+
+        color: #162548;
+    }
+}
+
+.main-menu {
+    background: #F1F3F6 !important;
+    
+    .navbar-header .navbar-brand {
+        margin-top: 2.35rem;
+    }
+
+    .main-menu-content ul {
+        background: #F1F3F6 !important;
+
+        .active {
+            .icon-container {
+                background: linear-gradient(136.32deg, rgba(58, 60, 64, 0.4) 1.49%, rgba(255, 255, 255, 0.304174) 97.46%), #69EBEC !important;
+                background-blend-mode: soft-light, normal !important;
+                box-shadow: -7px -7px 10px #FFFFFF, 7px 7px 10px rgba(105, 235, 236, 0.31) !important;
+            }
+        }
+
+        .nav-item {
+            margin: 0px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+
+            a {
+                min-height: 60px;
+                padding: 0;
+            }
+
+            &:active {
+                .icon-container {
+                    background: linear-gradient(136.32deg, rgba(58, 60, 64, 0.4) 1.49%, rgba(255, 255, 255, 0.304174) 97.46%), #69EBEC;
+                    background-blend-mode: soft-light, normal;
+                    box-shadow: -7px -7px 10px #FFFFFF, 7px 7px 10px rgba(105, 235, 236, 0.31);
+                }   
+            }
+        }
+
+        .menu-text {
+            display: flex;
+            justify-content: flex-start;
+    
+            .icon-container {
+                background: #F1F3F6;
+                box-shadow: -7px -7px 10px rgba(255, 255, 255, 0.5), 7px 7px 10px rgba(202, 206, 220, 0.31);
+                border-radius: 5px;
+                margin-right: 16px;
+                width: 40px;
+                height: 40px;
+                text-align: center;
+                margin-left: 10px;
+                margin-top: 10px;
+
+                svg {
+                    margin-right: 0;
+                    margin-top: 10px;
+                }
+            }
+
+            .menu-title {
+                margin-top: 18px;
+            }
+        }
+    }
+}
+
+.vertical-layout .main-menu.theme-primary .navigation .nav-item.active a {
+    background: transparent;
+    box-shadow: none !important;
+}
+
+// navbar custom css
+.custom-nav-search {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 20px 0px 0px;
+    margin-left: -20%;
+    margin-right: 6%;
+
+    .nav-search-input {        
+        input {
+            background: #F1F3F6;
+            box-shadow: inset -4px -4px 15px #FFFFFF, inset 4px 4px 10px rgba(202, 206, 220, 0.62);
+            border-radius: 3px;
+            border: none;
+            min-height: 30px;
+            min-width: 300px;
+        }
+    }
+
+    .nav-search-addon {
+        margin-left: -30px;
+        svg {
+            width: 18px;
+            height: 16px;
+            margin-top: 8px;
+        }   
+    }
+}
+
+.nav-link {
+    svg {
+        color: #162548;
+    }
+
+    .badge-up {
+        background-color: #fff;
+        .badge-number {
+            width: 8px;
+            height: 8px;
+            background-color: #FF531D;
+            border-radius: 50%;
+        }
+    }
+}
